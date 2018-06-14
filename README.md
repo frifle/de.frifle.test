@@ -1,6 +1,4 @@
-# de.frifle.test
-
-Testcase to support payara issue 2822.
+# Testcase to support payara issue 2822.
 
 Steps to reproduce:
   * in payara configure a jdbc connection-pool and a jdbc resource named jdbc/scottDS, eg
