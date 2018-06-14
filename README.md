@@ -1,7 +1,7 @@
 # Testcase to support payara issue 2822.
 
 Steps to reproduce:
-  * in payara configure a jdbc connection-pool and a jdbc resource named jdbc/scottDS, eg
+In payara configure a jdbc connection-pool and a jdbc resource named jdbc/scottDS, eg
     
     <jdbc-connection-pool datasource-classname="oracle.jdbc.pool.OracleConnectionPoolDataSource" name="scott_pool" res-type="javax.sql.ConnectionPoolDataSource">
       <property name="User" value="scott"></property>
@@ -17,10 +17,11 @@ Steps to reproduce:
       </jdbc-connection-pool>
       <jdbc-resource pool-name="scott_pool" jndi-name="jdbc/scottDS"></jdbc-resource>
  
- * dont forget the resource-ref
-   <resource-ref ref="jdbc/scottDS"></resource-ref>
+dont forget the resource-ref
+
+    <resource-ref ref="jdbc/scottDS"></resource-ref>
    
- Build the project using `mvn install` and deploy it to payara. At this point we get an RuntimeException
+Build the project using `mvn install` and deploy it to payara. At this point we get an RuntimeException
     
     java.lang.RuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at com.sun.enterprise.connectors.ConnectorRuntime.lookupDataSourceInDAS(ConnectorRuntime.java:593)
