@@ -73,17 +73,17 @@ Steps to reproduce:
 	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
+	at java.lang.Thread.run(Thread.java:748)   
+    Caused by: com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.validateResource(JdbcDataSource.java:82)
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.setResourceInfo(JdbcDataSource.java:63)
 	at org.glassfish.jdbcruntime.JdbcRuntimeExtension.lookupDataSourceInDAS(JdbcRuntimeExtension.java:142)
 	at com.sun.enterprise.connectors.ConnectorRuntime.lookupDataSourceInDAS(ConnectorRuntime.java:589)
 	... 50 more
 
-2018-06-14T19:17:32.016+0200|SCHWERWIEGEND: Exception while preparing the app
-2018-06-14T19:17:32.017+0200|SCHWERWIEGEND: Exception during lifecycle processing
-java.lang.RuntimeException: Invalid resource : jdbc/myTestDS__pm
+    2018-06-14T19:17:32.016+0200|SCHWERWIEGEND: Exception while preparing the app
+    2018-06-14T19:17:32.017+0200|SCHWERWIEGEND: Exception during lifecycle processing
+    java.lang.RuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at com.sun.enterprise.connectors.ConnectorRuntime.lookupDataSourceInDAS(ConnectorRuntime.java:593)
 	at com.sun.enterprise.connectors.ConnectorRuntime.lookupPMResource(ConnectorRuntime.java:517)
 	at org.glassfish.persistence.common.PersistenceHelper.lookupPMResource(PersistenceHelper.java:63)
@@ -135,15 +135,15 @@ java.lang.RuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
+    Caused by: com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.validateResource(JdbcDataSource.java:82)
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.setResourceInfo(JdbcDataSource.java:63)
 	at org.glassfish.jdbcruntime.JdbcRuntimeExtension.lookupDataSourceInDAS(JdbcRuntimeExtension.java:142)
 	at com.sun.enterprise.connectors.ConnectorRuntime.lookupDataSourceInDAS(ConnectorRuntime.java:589)
 	... 50 more
 
-2018-06-14T19:17:32.024+0200|SCHWERWIEGEND: Exception while preparing the app : Invalid resource : jdbc/myTestDS__pm
-com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
+    2018-06-14T19:17:32.024+0200|SCHWERWIEGEND: Exception while preparing the app : Invalid resource : jdbc/myTestDS__pm
+    com.sun.appserv.connectors.internal.api.ConnectorRuntimeException: Invalid resource : jdbc/myTestDS__pm
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.validateResource(JdbcDataSource.java:82)
 	at org.glassfish.jdbcruntime.service.JdbcDataSource.setResourceInfo(JdbcDataSource.java:63)
 	at org.glassfish.jdbcruntime.JdbcRuntimeExtension.lookupDataSourceInDAS(JdbcRuntimeExtension.java:142)
