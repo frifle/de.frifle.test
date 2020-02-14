@@ -16,9 +16,17 @@
     </servlet-mapping>
 
     <resource-ref>
-        <res-ref-name>jdbc/myTestDS</res-ref-name>
+        <res-ref-name>java:comp/env/myTestDS</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-        <mapped-name>jdbc/scottDS</mapped-name>
+        <!-- mapped-name>jdbc/scottDS</mapped-name>
+        <lookup-name>java:global/jdbc/scottDS</lookup-name -->
     </resource-ref>
+<!--
+    <resource-ref>
+        <res-ref-name>java:comp/env/myTestDS__pm</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <mapped-name>jdbc/scottDS</mapped-name>
+        <lookup-name>jdbc/scottDS</lookup-name>
+    </resource-ref>
+-->
 </web-app>
